@@ -1,0 +1,20 @@
+200 OK
+
+
+[
+  {
+    "metricName": "txnsPerSecond"
+  },
+  {
+    "metricName": "forcedDelay"
+  },
+  {
+    "metricName": "responseTime"
+  },
+  {
+    "metricName": "txnThroughput"
+  },
+  {
+    "metricName": "txnHitsMisses"
+  }
+]
