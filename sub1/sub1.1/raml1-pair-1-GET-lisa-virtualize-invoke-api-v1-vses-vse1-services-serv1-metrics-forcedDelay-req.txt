@@ -1,0 +1,3 @@
+GROUP-NAME:GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/forcedDelay
+PAIR-NAME:pair-1 GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/forcedDelay
+GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/forcedDelay 
