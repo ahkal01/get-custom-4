@@ -1,1 +1,0 @@
-{ "my-example-response-{THING}": "18879" }
