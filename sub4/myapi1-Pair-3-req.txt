@@ -1,0 +1,6 @@
+GROUP-NAME:Group 2
+PAIR-NAME:Pair 3
+PUT /ToDoRESTService/rest/customer?name=Clark
+
+
+{"name":"Clark","address":"Manchester", "trade": "12-15-2013", "settle": "12-19-2013"}
