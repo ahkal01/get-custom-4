@@ -1,5 +1,0 @@
-GROUP-NAME:Group 1
-PAIR-NAME:Pair 1
-GET /mypath/myresource/{THING}
-Content-Type:application/json;charset=UTF8
-
