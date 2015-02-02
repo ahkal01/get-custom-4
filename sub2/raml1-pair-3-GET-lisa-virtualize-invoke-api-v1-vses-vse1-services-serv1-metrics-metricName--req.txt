@@ -1,3 +1,0 @@
-GROUP-NAME:GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/{metricName}
-PAIR-NAME:pair-3 GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/{metricName}
-GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/{metricName} 
