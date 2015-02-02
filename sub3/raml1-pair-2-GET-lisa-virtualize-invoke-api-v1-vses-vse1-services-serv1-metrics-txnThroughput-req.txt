@@ -1,3 +1,0 @@
-GROUP-NAME:GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnThroughput
-PAIR-NAME:pair-2 GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnThroughput
-GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnThroughput 
