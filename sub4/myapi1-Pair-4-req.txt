@@ -1,6 +1,0 @@
-GROUP-NAME:Group 2
-PAIR-NAME:Pair 4
-DELETE /ToDoRESTService/rest/customer/Clark
-
-Accept-Charset: utf-8
-Content-Type: application/json
