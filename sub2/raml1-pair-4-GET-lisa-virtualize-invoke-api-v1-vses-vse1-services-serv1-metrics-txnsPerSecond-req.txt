@@ -1,3 +1,0 @@
-GROUP-NAME:GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnsPerSecond
-PAIR-NAME:pair-4 GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnsPerSecond
-GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnsPerSecond 
