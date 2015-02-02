@@ -1,3 +1,0 @@
-GROUP-NAME:GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/responseTime
-PAIR-NAME:pair-6 GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/responseTime
-GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/responseTime 
