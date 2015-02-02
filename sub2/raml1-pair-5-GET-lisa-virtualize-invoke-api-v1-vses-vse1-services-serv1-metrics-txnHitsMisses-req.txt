@@ -1,3 +1,0 @@
-GROUP-NAME:GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnHitsMisses
-PAIR-NAME:pair-5 GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnHitsMisses
-GET /lisa-virtualize-invoke/api/v1/vses/vse1/services/serv1/metrics/txnHitsMisses 
