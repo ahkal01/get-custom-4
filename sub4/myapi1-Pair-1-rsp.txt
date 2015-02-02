@@ -1,6 +1,0 @@
-200
-
-{
-	"my-example-response": 18920,
-	"mything": "{THING}"
-}
