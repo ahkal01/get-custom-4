@@ -1,4 +1,0 @@
-{
-  "title" : "{title}",
-  "author" : "{{=[:First Name:]}} {{=[:Middle Initial:]}} {{=[:Last Name:]}}"
-}
