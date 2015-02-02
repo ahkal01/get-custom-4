@@ -1,3 +1,0 @@
-GROUP-NAME:/book/{title}
-PAIR-NAME:pair-1 GET /book/{title}
-GET /book/{title}
