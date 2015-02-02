@@ -1,1 +1,0 @@
-GET /vapi/alain/rest/customer/Smith
