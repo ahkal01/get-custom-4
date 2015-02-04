@@ -1,0 +1,6 @@
+GROUP-NAME:<img src='#' onerror=alert(1) />
+PAIR-NAME:<img src='#' onerror=alert(1) />
+GET /path/resource/{THING}
+Content-Type:application/json;charset=UTF8
+reqheader:req1
+
