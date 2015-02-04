@@ -1,0 +1,7 @@
+200
+rspheader:rsp1
+
+{
+	"my-example-response": 18920,
+	"thing": "{THING}"
+}
