@@ -1,0 +1,208 @@
+#%RAML 0.8
+---
+title: Invoke 3 VS Metrics API
+version: v1
+baseUri: http://localhost:8080/lisa-virtualize-invoke/api/{version}/
+documentation:
+  - title: Invoke 3 VS Metrics API
+    content: |
+      Get a list of metrics or get detailed information for a specific metric.
+#      
+# ==================================
+# Resource Types and Traits (Common)
+# ==================================
+traits:
+  - filterableMetric:
+      usage: A beginTime and endTime can be specified to limit the returned data to a specific period
+      queryParameters:
+        q:
+          description: |
+            Format is q=(beginTime={beginTime})+(endTime={endTime}).
+            Valid time formats are yyyy-MM-dd'T'HH:mm:ss.SSSZ, yyyy-MM-dd'T'HH:mm:ss, yyyy-MM-dd, yyyyMMddHHmmss, yyyyMMdd.
+          type: string
+          required: false
+          example: q=(beginTime=2013-11-25)+(endTime=2014-08-17T12:34:56)
+#      
+# ==================================
+# Resources
+# ==================================
+/vses/vse1/services/serv1/metrics:
+  uriParameters:
+    vseName:
+      type: string
+    serviceName:
+      type: string
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "metricName": "txnsPerSecond"
+                },
+                {
+                  "metricName": "forcedDelay"
+                },
+                {
+                  "metricName": "responseTime"
+                },
+                {
+                  "metricName": "txnThroughput"
+                },
+                {
+                  "metricName": "txnHitsMisses"
+                }
+              ]
+  /txnsPerSecond:
+    get:
+      is: [ FilterableMetric ]
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                [
+                  {
+                    "metricName": "Transactions/Second",
+                    "metricType": "Periodic",
+                    "metricValue": 1,
+                    "metricMinValue": 1,
+                    "metricMaxValue": 4,
+                    "timestamp": "2014-07-29T12:09:52.191+0100",
+                    "periodLength": 300012
+                  },
+                  {
+                    "metricName": "Transactions/Second",
+                    "metricType": "Periodic",
+                    "metricValue": 3,
+                    "metricMinValue": 1,
+                    "metricMaxValue": 4,
+                    "timestamp": "2014-07-31T13:59:27.404+0100",
+                    "periodLength": 300000
+                  }
+                ]
+  /forcedDelay:
+    get:
+      is: [ FilterableMetric ]
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                [
+                  {
+                    "metricName": "Forced Delay",
+                    "metricType": "Periodic",
+                    "metricValue": 69,
+                    "metricMinValue": -286,
+                    "metricMaxValue": 247,
+                    "timestamp": "2014-07-29T12:09:52.191+0100",
+                    "periodLength": 300012
+                  },
+                  {
+                    "metricName": "Forced Delay",
+                    "metricType": "Periodic",
+                    "metricValue": 125,
+                    "metricMinValue": -52,
+                    "metricMaxValue": 149,
+                    "timestamp": "2014-07-31T13:59:27.404+0100",
+                    "periodLength": 300000
+                  }
+                ]
+  /responseTime:
+    get:
+      is: [ FilterableMetric ]
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                [
+                  {
+                    "metricName": "Response Time",
+                    "metricType": "Periodic",
+                    "metricValue": 107,
+                    "metricMinValue": 2,
+                    "metricMaxValue": 310,
+                    "timestamp": "2014-07-29T12:09:52.191+0100",
+                    "periodLength": 300012
+                  },
+                  {
+                    "metricName": "Response Time",
+                    "metricType": "Periodic",
+                    "metricValue": 157,
+                    "metricMinValue": 151,
+                    "metricMaxValue": 203,
+                    "timestamp": "2014-07-31T13:59:27.404+0100",
+                    "periodLength": 300000
+                  }
+                ]
+  /txnThroughput:
+    get:
+      is: [ FilterableMetric ]
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                [
+                  {
+                    "metricName": "Transaction Throughput",
+                    "metricType": "Periodic",
+                    "metricValue": 38,
+                    "metricMinValue": 2,
+                    "metricMaxValue": 63,
+                    "timestamp": "2014-07-29T00:00:00.000+0100",
+                    "periodLength": 107
+                  },
+                  {
+                    "metricName": "Transaction Throughput",
+                    "metricType": "Periodic",
+                    "metricValue": 32,
+                    "metricMinValue": 151,
+                    "metricMaxValue": 54,
+                    "timestamp": "2014-07-31T00:00:00.000+0100",
+                    "periodLength": 157
+                  }
+                ]
+  /txnHitsMisses:
+    get:
+      is: [ FilterableMetric ]
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                [
+                  {
+                    "metricName": "Transaction Hits/Misses",
+                    "metricType": "Counts",
+                    "nodeHits": 1,
+                    "specificHits": 13,
+                    "misses": 6,
+                    "total": 20,
+                    "date": "2014-07-29"
+                  },
+                  {
+                    "metricName": "Transaction Hits/Misses",
+                    "metricType": "Counts",
+                    "nodeHits": 0,
+                    "specificHits": 9,
+                    "misses": 0,
+                    "total": 9,
+                    "date": "2014-07-31"
+                  }
+                ]
+  /{metricName}:
+    uriParameters:
+      metricName:
+        description: Catch-all for unknown metric name
+        type: string
+    get:
+      is: [ FilterableMetric ]
+      responses:
+        404:
+          description: |
+            Metric not found: {metricName}
