@@ -1,0 +1,20 @@
+200
+
+[{
+  "idtype" : "OCLC",
+  "id" : "{{=[::D*(7)]}}",
+  "title" : "The {{=[:City:]}} Travel Guide",
+  "author" : "{{=[:Middle Initial:]}}. {{=[:First Name:]}} {{=[:Last Name:]}}"
+},
+{
+  "idtype" : "OCLC",
+  "id" : "{{=[::D*(7)]}}",
+  "title" : "{{=[:First Name:]}}",
+  "author" : "{{=[:First Name:]}} {{=[:Last Name:]}}"
+},
+{
+  "idtype" : "ISBN",
+  "id" : "{{=[::978-D*(1)-D*(3)-D*(5)-D*(1)]}}",
+  "title" : "{{=[:First Name:]}}",
+  "author" : "{{=[:First Name:]}} {{=[:Last Name:]}}"
+}]
